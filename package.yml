@@ -1,0 +1,21 @@
+name       : repo
+version    : 2.8.0
+release    : 1
+source     :
+    - https://storage.googleapis.com/git-repo-downloads/repo : d73f3885d717c1dc89eba0563433cec787486a0089b9b04b4e8c56e7c07c7610
+license    :
+    - Apache-2.0
+component  : programming.tools
+extract    : no
+strip      : no
+summary    : Repo launcher.
+description: |
+    Repo is a tool built on top of Git. Repo helps manage many Git repositories, does the uploads to revision control systems,     and automates parts of the development workflow. Repo is not meant to replace Git, only to make it easier to work with Git. 
+    The repo command is an executable Python script that you can put anywhere in your path.
+rundeps    :
+    - python3
+setup      : |
+    # nothing to do
+install    : | 
+    install -Dm755 -t $installdir/usr/bin $sources/repo
+    
